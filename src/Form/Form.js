@@ -18,8 +18,8 @@ class Form extends Component {
             id: Date.now(),
             ...this.state
         }
-    //Props need to be passed down from App to scope a function to add submit reservation details
-         this.clearFields()
+        this.props.addReservation(newReservation)
+        this.clearFields()
     }
 
     handleChange = event => {
