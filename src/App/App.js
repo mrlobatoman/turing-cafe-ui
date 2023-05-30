@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { fetchReservations } from '../apiCalls';
-import Card from '../Card/Card';
 import Form from '../Form/Form';
 import './App.css';
 import Reservations from '../Reservations/Reservations';
@@ -17,6 +16,7 @@ class App extends Component {
     fetchReservations()
       .then(data => this.setState({ reservations: data }))
   }
+ 
 
   render() {
     return (
@@ -26,10 +26,6 @@ class App extends Component {
           <Form />
         </div>
         <Reservations reservations={this.state.reservations}/>
-        {/* <div className="reservations-container">
-        
-        </div> */}
-        
       </div>
     )
   }

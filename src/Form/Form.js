@@ -18,9 +18,7 @@ class Form extends Component {
             id: Date.now(),
             ...this.state
         }
-        //Adding a
-
-
+    //Props need to be passed down from App to scope a function to add submit reservation details
          this.clearFields()
     }
 
@@ -45,7 +43,7 @@ class Form extends Component {
                 />
                 <input
                     type='text'
-                    placeholder='Date'
+                    placeholder='Date (mm/dd)'
                     name='date'
                     value={this.state.date}
                     onChange={event => this.handleChange(event)}
